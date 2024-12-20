@@ -1763,13 +1763,6 @@ header#header .header-wrap {
   display: none;
 }
 
-nav.primary-nav {
-  padding: 20px;
-}
-
-primary-nav {
-  display: block !important;
-}
 
 @media (max-width: 1600px) {
   .primary-nav {
@@ -1787,8 +1780,7 @@ primary-nav {
     display: flex;
     justify-content: center; /* Centers the menu items horizontally */
     align-items: center; /* Ensures the items are vertically centered */
-    margin: 0; /* Removes any default margin */
-    padding-left: 2em; /* Removes any default padding */
+    margin: 0; 
   }
 
   .menu-itemhome1 {
@@ -1816,10 +1808,11 @@ primary-nav {
 }
 
 .navbar li {
+
   font-size: 100%;
   font-family: var(--heading-font);
   font-weight: 500;
-  padding-right: 30px;
+  padding-right: 10px;
 }
 
 .primary-nav li.menu-item a:hover,
@@ -1848,25 +1841,25 @@ a.text-black.text-uppercase.dropdown-item:hover {
 
 @media (max-width: 1600px) {
   .navbar li {
-    font-size: 90%; /* Slightly smaller font for smaller screens */
+    font-size: 100%; /* Slightly smaller font for smaller screens */
   }
 }
 
 @media (max-width: 1200px) {
   .navbar li {
-    font-size: 80%;
+    font-size: 90%;
   }
 }
 
 @media (max-width: 768px) {
   .navbar li{
-    font-size: 70%;/* For tablet or mobile resolutions */
+    font-size: 80%;/* For tablet or mobile resolutions */
   }
 }
 
 @media (max-width: 501px) {
   .navbar li{
-    font-size: 55%;/* For tablet or mobile resolutions */
+    font-size: 60%;/* For tablet or mobile resolutions */
   }
 }
 
@@ -2061,6 +2054,7 @@ a.text-black.text-uppercase.dropdown-item:hover {
   text-decoration: underline;
 }
 
+
 .product-item .cart-concern button {
   padding: 5px 12px;
   margin: 0 auto; /* Center the button horizontally */
@@ -2071,9 +2065,16 @@ a.text-black.text-uppercase.dropdown-item:hover {
 }
 
 @media only screen and (max-width: 768px) {
-  .product-item .cart-concern button {
+  .product-item .cart-button .btn-sm {
     max-width: 70%; /* Allow slightly larger buttons on smaller screens */
-    font-size: 0.2rem; /* Adjust text size for better fit */
+    font-size: 0.5rem; /* Adjust text size for better fit */
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .product-item .cart-button .btn-sm {
+    max-width: 90%; /* Allow slightly larger buttons on smaller screens */
+    font-size: 1rem; /* Adjust text size for better fit */
   }
 }
 
