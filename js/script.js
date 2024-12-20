@@ -38,26 +38,6 @@
     });
 
     // Responsive Navigation with Button
-    var initHamburgerMenu = function () {
-      const hamburger = document.querySelector(".hamburger");
-      const navMenu = document.querySelector(".menu-list");
-
-      hamburger.addEventListener("click", mobileMenu);
-
-      function mobileMenu() {
-        hamburger.classList.toggle("active");
-        navMenu.classList.toggle("responsive");
-      }
-
-      const navLink = document.querySelectorAll(".nav-link");
-
-      navLink.forEach(n => n.addEventListener("click", closeMenu));
-
-      function closeMenu() {
-        hamburger.classList.remove("active");
-        navMenu.classList.remove("responsive");
-      }
-    };
 
     //quantity in product
     var initquantity = function () {
@@ -140,12 +120,12 @@
         },
         breakpoints: {
           0: {
-            slidesPerView: 1,
-            spaceBetween: 20,
+            slidesPerView: 3,
+            spaceBetween: 5,
           },
           599: {
-            slidesPerView: 2,
-            spaceBetween: 10,
+            slidesPerView: 3,
+            spaceBetween: 5,
           },
           980: {
             slidesPerView: 3,
@@ -181,7 +161,7 @@
 
     var large_slider = new Swiper(".large-swiper", {
       loop: true,
-      slidesPerView: 1,
+      slidesPerView: 2,
       autoplay: true,
       effect: 'fade',
       thumbs: {

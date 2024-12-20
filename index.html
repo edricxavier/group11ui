@@ -31,9 +31,9 @@
 
 <body class="hompage">
 
-  <header id="header" class=" nav-header content-light fixed-top border-bottom">
-    <div class="header-wrap container py-3">
-      <div class="row align-items-center pb-3 pb-lg-0">
+  <header id="header" class="nav-header content-light fixed-top border-bottom">
+    <div class="header-wrap container py-0">
+      <div class="row align-items-center pb-1 pb-lg-0">
         <div class="primary-nav col-md-5 col-sm-2">
           <nav class="navbar">
             <div class="main-menu">
@@ -45,38 +45,33 @@
                   <a href="#billboard-about" class="text-uppercase item-anchor">About</a>
                 </li>
                 <li class="menu-itemhome1">
-                  <a href="#billboard-ar" class="text-uppercase item-anchor">Ar Try</a>
+                  <a href="#billboard-ar" class="text-uppercase item-anchor">Ar_Try</a>
                 </li>                
                 <li class="menu-itemhome1 dropdown">
                   <a class="text-uppercase item-anchor dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                     aria-expanded="false"> Shop </a>
                   <ul class="dropdown-menu">
                     <li class="sub-page pe-0"><a class="text-black text-uppercase dropdown-item" href="#new-arrivals">New Arrivals</a></li>
-                    <li class="sub-page pe-0"><a class="text-black text-uppercase dropdown-item" href="#targetPro"> All Products </a>
-                    </li>
+                    <li class="sub-page pe-0"><a class="text-black text-uppercase dropdown-item" href="#targetPro"> All Products </a></li>
+                    <li class="sub-page pe-0"><a class="cart for-buy text-black text-uppercase dropdown-item" data-bs-toggle="modal" data-bs-target="#cart" href="#"> Cart </a></li>
                   </ul>
                 </li>
                 <li class="menu-itemhome1">
-                  <a href="#footer" class="text-uppercase item-anchor">Contact US</a>
+                  <a href="#footer" class="text-uppercase item-anchor">Contact</a>
                 </li>
 
               </ul>
-              <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-              </div>
             </div>
           </nav>
         </div>
         <div class="col-md-2 col-sm-4 brand-block ">
           <div class="main-logo text-lg-center">
             <a href="index.html">
-              <img src="images/titlenew.png" alt="logo" class="brand-image">
+              <img src="images/titlenew.png" alt="logo" class="brand-image" id="brand-logo">
             </a>
           </div>
         </div>
-        <div class="right-block col-md-5 col-sm-4">
+        <div class="right-block col-md-5 col-sm-4" id= "cart-block">
           <nav class="navbar justify-content-end">
             <div class="user-items">
               <ul class="list-unstyled content-light d-flex align-items-center m-0">
@@ -125,8 +120,7 @@
 
 
   <section id="billboard">
-    <div class="d-flex jarallax position-relative"
-      style="background-image: url(images/image_01.png); background-size: contain; background-repeat: no-repeat; height: 100vh; background-position: center; height: 100vh; background-color: #cdb8b3">
+    <div class="d-flex jarallax position-relative">
       <!-- <div class="banner-content content-light text-center offset-md-3 col-md-6 align-content-center">
         <h2 class="banner-title">
           Fit. Shion
@@ -140,30 +134,58 @@
   </section>
 
   <section id="billboard-about">
-    <div class="d-flex jarallax position-relative"
-      style="background-image: url(images/image_02.png); background-size: cover; background-repeat: no-repeat; background-position: center; height: 100vh;      background-color: #efe5dc;">
-      <div class="banner-content content-light offset-md-5 col-md-6 text-black text-start d-flex flex-column align-items-center justify-content-center">
-        <h2 class="banner-title text-black text-end">
+    <div class="jarallax">
+      <div class= "text-column">
+        <h2 class="banner-title">
           About Us
-        </h2 class="text-justify">
+        </h2>
         <div class="text-content mt-3">
-          <p class="fs-5">隨著線上購物成為年輕族群的首選</p>
-          <p class="fs-5">但無法試穿讓人難以掌握服飾的合身度</p>
-          <p class="fs-5">經常導致退換貨、浪費時間與資源</p>
-          <p class="fs-5">為此，我們想透過AR技術</p>
-          <p class="fs-5">打造出「模擬穿著效果的App」</p>
-          <p class="fs-5">並針對下著及連身裙類</p>
-          <p class="fs-5">設計了腰圍、臀圍調整與紮衣樣式模擬</p>
-          <p class="fs-5">讓消費者輕鬆比對合適的尺碼</p>
-          <p class="fs-5">享受準確、便捷的購物體驗。</p>
+          <p class="fs-6">隨著線上購物成為年輕族群的首選</p>
+          <p class="fs-6">但無法試穿讓人難以掌握服飾的合身度</p>
+          <p class="fs-6">經常導致退換貨、浪費時間與資源</p>
+          <p class="fs-6">為此，我們想透過AR技術</p>
+          <p class="fs-6">打造出「模擬穿著效果的App」</p>
+          <p class="fs-6">並針對下著及連身裙類</p>
+          <p class="fs-6">設計了腰圍、臀圍調整與紮衣樣式模擬</p>
+          <p class="fs-6">讓消費者輕鬆比對合適的尺碼</p>
+          <p class="fs-6">享受準確、便捷的購物體驗。</p>
         </div>
+      </div>
+      <div class="picture-column">
+        <img src="images/selfie.png" alt="AR Try On" class="responsive-img" />
+      </div>
       </div>
     </div>
   </section>
 
   <section id="billboard-ar">
+    <div class="jarallax">
+      <!-- Text Section -->
+      <div class="text-column2">
+        <h2 class="banner-title2">AR TRY ON</h2>
+        <div class="text-content2 mt-3">
+          <p class="fs-6">網路購物時，無實體也能使用AR相機自拍</p>
+          <p class="fs-6">來試穿衣服，且App與腰帶連動</p>
+          <p class="fs-6">可以在相機中模擬衣服紥起的樣子</p>
+          <p class="fs-6">或是調整腰帶、輸入腰圍數</p>
+          <p class="fs-6">以搜尋符合尺寸的服飾</p>
+        </div>
+      </div>
+
+      <!-- Picture Section -->
+      <div class="picture-column2">
+        <img src="images/sabuk.png" alt="AR Try On" class="responsive-img2" />
+      </div>
+
+      <!-- Button Section -->
+      <button type="button" class="btn custom-btn">TRY NOW</button>
+    </div>
+  </section>
+
+
+  <!-- <section id="billboard-ar">
     <div class="d-flex jarallax position-relative"
-      style="background-image: url(images/image_03.png); background-size: 100vw 100vh; background-repeat: no-repeat; height: 100vh; background-position: center; background-color: #ffffff  ;">
+      style="background-image: url(images/image_03.png); background-size: 100vw 100vh; background-repeat: no-repeat; height: 100vh; background-position: center; background-color: #ffffff;">
       <div class="banner-content content-light offset-md-1 col-md-6 text-black text-start d-flex flex-column align-items-center justify-content-center">
         <h2 class="banner-title text-black text-end">
           AR Try ON
@@ -178,7 +200,7 @@
         <button type="button" class="btn custom-btn">TRY NOW</button>
       </div>
     </div>
-  </section>
+  </section> -->
 
 
   <section id="new-arrivals" class="product-store padding-medium position-relative overflow-hidden" style="background-color: #cdb8b3;">
@@ -348,7 +370,7 @@
   </div>
 
   <section id="fashion-trending" class="product-store padding-medium position-relative overflow-hidden"style="background-color: #cdb8b3;">
-    <div class="container mb-5">
+    <div class="container mb-3">
       <div class="row">
         <div class="swiper product-swiper">
           <div class="swiper-wrapper">
@@ -360,7 +382,7 @@
                 </div>
                 <div class="cart-concern">
                   <div class="cart-button d-flex justify-content-center">
-                    <a href="#" class="add-to-cart btn btn-medium btn-light" data-name="Shirt-1" data-price="12">Add to Cart</a>
+                    <a href="#" class="add-to-cart btn btn-sm btn-light" data-name="Shirt-1" data-price="12">Add to Cart</a>
                   </div>
                 </div>
                 <div class="product-detail text-center">
@@ -379,7 +401,7 @@
                 </div>
                 <div class="cart-concern">
                   <div class="cart-button d-flex justify-content-center">
-                    <a href="#" class="add-to-cart btn btn-medium btn-light" data-name="Shirt-2" data-price="14">Add to Cart</a>
+                    <a href="#" class="add-to-cart btn btn-sm btn-light" data-name="Shirt-2" data-price="14">Add to Cart</a>
                   </div>
                 </div>
                 <div class="product-detail text-center">
@@ -398,7 +420,7 @@
                 </div>
                 <div class="cart-concern">
                   <div class="cart-button d-flex justify-content-center">
-                      <a href="#" class="add-to-cart btn btn-medium btn-light" data-name="Shirt-3" data-price="16">Add to Cart</a>
+                      <a href="#" class="add-to-cart btn btn-sm btn-light" data-name="Shirt-3" data-price="16">Add to Cart</a>
                   </div>
                 </div>
                 <div class="product-detail text-center">
@@ -417,7 +439,7 @@
                 </div>
                 <div class="cart-concern">
                   <div class="cart-button d-flex justify-content-center">
-                    <a href="#" class="add-to-cart btn btn-medium btn-light" data-name="Shirt-4" data-price="18">Add to Cart</a>
+                    <a href="#" class="add-to-cart btn btn-sm btn-light" data-name="Shirt-4" data-price="18">Add to Cart</a>
                   </div>
                 </div>
                 <div class="product-detail text-center">
@@ -795,7 +817,7 @@
           
             <div class="col-lg-5 col-sm-6">
               <div class="footer-menu text-uppercase contact-item menu-002">
-                <h1 class="widget-title">Contact Us</h1>
+                <h1 class="widget-title">Contact</h1>
                 <a href="">09 - XXX - XXX - XXX</a>
                 <a href="mailto:">GROUP11@gmail.com</a>
                 <p>64002 雲林縣斗六市大學路段 123 號</p>
