@@ -24,6 +24,17 @@
       </div>
     </div>
     <script>
+  
+    navigator.mediaDevices.getUserMedia({ video: true })
+        .then(function (stream) {
+            var video = document.createElement('video');
+            video.srcObject = stream;
+            video.play();
+            document.body.appendChild(video); // 在页面上显示摄像头画面
+        })
+        .catch(function (err) {
+            console.error("摄像头访问失败: " + err);
+        });
 
       var container = document.querySelector("#unity-container");
       var canvas = document.querySelector("#unity-canvas");
