@@ -3291,7 +3291,7 @@ faqs page style start
 }
 
 .banner-title {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: black;
   margin-bottom: 1rem;
 }
@@ -3338,26 +3338,25 @@ faqs page style start
   }
 }
 
-
 #billboard-ar {
   position: relative;
   width: 100%;
+  min-height: 80vh;
 }
 
 #billboard-ar .jarallax {
-  display: flex; /* Keeps flex layout */
-  flex-direction: column; /* Stacks items vertically */
+  display: flex; /* Creates the two-column layout */
   align-items: center;
   height: auto; /* Adjusts height based on content */
   background-color: #ffffff;
-  padding: 2rem; /* Adds spacing around the section */
 }
 
 .picture-column2 {
-  width: 100%; /* Takes full width */
+  flex: 1; /* Left column takes up one part of the space */
   display: flex; /* Centers the image */
   justify-content: center;
   align-items: center;
+  width: 100%; /* Ensures it spans the full width */
   padding: 1rem;
 }
 
@@ -3367,72 +3366,63 @@ faqs page style start
 }
 
 .text-column2 {
+  flex: 1; /* Right column takes up one part of the space */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
-  width: 100%; /* Ensures text takes full width */
-  margin-bottom: 2rem;
+  padding: 2rem; /* Adds padding around the text */
+  text-align: center; /* Aligns text to the center */
 }
 
 .banner-title2 {
-  font-size: 3rem;
+  font-size: 5rem;
   color: black;
   margin-bottom: 1rem;
 }
 
-.text-content2 {
-  margin-top: 1rem;
-  font-size: 0.9rem;
+button.custom-btn {
+  margin-top: 2rem; /* Add space between picture and button */
+  align-self: center; /* Keep the button centered */
+  text-align: center;
 }
 
-button.custom-btn {
-  margin-top: 2rem; /* Adds space between text and button */
-  padding: 10px 20px;
-  font-size: 1rem;
-  cursor: pointer;
+.text-content2 {
+  margin-top: 1rem;
+  font-size: 0.8rem; /* Adjust font size as needed */
 }
 
 @media (min-width: 1000px) {
   #billboard-ar .jarallax {
-    flex-direction: row; /* Switch to row layout for large screens */
-    justify-content: flex-start; /* Align items to the left */
+    flex-direction: row; /* Two-column layout for large screens */
   }
 
-  .text-column2 {
-    text-align: left;
-    padding: 2rem 3rem;
-    flex: 1;
-  }
-
-  .picture-column2 {
-    height: 100%; /* Adjust height for large screens */
-    flex: 1;
-  }
-
-  button.custom-btn {
-    align-self: center;
-    text-align: center;
+  .text-column {
+    padding: 2rem 3rem; /* Adjust padding for better spacing */
   }
 }
 
+
+/* Media Query for Small Screens (below 1000px) */
 @media (max-width: 1000px) {
   #billboard-ar .jarallax {
-    flex-direction: column; /* Stack the content vertically for small screens */
-    justify-content: flex-start; /* Ensure it aligns at the top */
+    flex-direction: column; /* Stack the content vertically for smaller screens */
+    justify-content: flex-start; /* Align columns at the top */
   }
 
-  .text-column2 {
-    /* Text comes first, naturally stacking */
-    text-align: center;
-    padding: 1rem;
-    margin-bottom: 2rem; /* Add space between text and picture */
+  .banner-title {
+    font-size: 1.8rem;
   }
 
   .picture-column2 {
-    /* Picture comes second */
-    width: 100%; /* Ensures the picture takes up full width */
+    width: 100%; /* Picture takes full width */
     padding: 0.5rem;
+  }
+
+  .text-column2 {
+    width: 100%; /* Text takes full width */
+    text-align: center; /* Center-align text on smaller screens */
+    padding: 1rem;
+    margin-bottom: 2rem; /* Add space between text and picture */
   }
 
   button.custom-btn {
@@ -3441,5 +3431,3 @@ button.custom-btn {
     text-align: center;
   }
 }
-
-
