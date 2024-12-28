@@ -172,7 +172,7 @@
           <p class="fs-6">或是調整腰帶、輸入腰圍數</p>
           <p class="fs-6">以搜尋符合尺寸的服飾</p>
         </div>
-        <button type="button" class="btn custom-btn" onclick="downloadApk()">TRY NOW</button>
+        <a href="https://raw.githubusercontent.com/edricxavier/group11ui/main/01.apk" download="01.apk" class="btn custom-btn">TRY NOW</a>
       </div>
       <!-- Picture Section -->
       <div class="picture-column2">
@@ -891,14 +891,7 @@
             this.price = price;
             this.count = count;
         }
-        
-        function downloadApk() {
-            const a = document.createElement('a');
-            a.href = '01.apk';
-            a.download = '01.apk';
-            a.click();
-        }
-        
+
         // Save cart 
         function saveCart() {
             sessionStorage.setItem('shoppingCart', JSON.stringify(cart));
